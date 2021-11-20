@@ -13,10 +13,11 @@ provider "aws" {
   
 }
 resource "aws_instance" "terraform-1" {
+  count = 2
   ami= "ami-0f1fb91a596abf28d"
   instance_type = "t3.micro"
   tags={
-      Name="tf-1"
+      Name="tf ${count.index}"
   }  
 }
 
