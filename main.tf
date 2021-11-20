@@ -11,7 +11,6 @@ terraform {
 # Configure the AWS Provider
 provider "aws" {
   region = "ap-south-1"
-  
 }
 # aws resources
 resource "aws_instance" "terraform-1" {
